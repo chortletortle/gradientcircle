@@ -25,6 +25,11 @@ class Walker {
   }
   
   void step() {
+    //saveFrame("f###.gif");
+    if(frameCount == 2000){
+      exit();
+    }
+      
     if (inc == 0) multColor = 1;
     if (inc == 255) multColor = -1;
     inc+=multColor;
@@ -32,7 +37,7 @@ class Walker {
     
     x = orX + sin(angle)*(rotSize+(inc/10));
     y = orY + cos(angle)*(rotSize+(inc/10));
-    angle+=PI;
+    angle+=PI/2;
     
     int change = 4;
     if (w <= 200){
