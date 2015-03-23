@@ -26,10 +26,10 @@ class Walker {
   
   void step() {
     //saveFrame("f###.gif");
-    if(frameCount == 2000){
+    /*if(frameCount == 2000){
       exit();
-    }
-      
+    }*/
+    background(255);
     if (inc == 0) multColor = 1;
     if (inc == 255) multColor = -1;
     inc+=multColor;
